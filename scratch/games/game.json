@@ -1,0 +1,234 @@
+[
+    {
+        "home_team": "Toronto Blue Jays",
+        "away_team": "Chicago Cubs",
+        "game_date": "2023-08-12",
+        "game_time": "19:45:00",
+        "favourite": "Chicago Cubs",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Tampa Bay Rays",
+        "away_team": "Cleveland Guardians",
+        "game_date": "2023-08-12",
+        "game_time": "20:09:49",
+        "favourite": "Cleveland Guardians",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Boston Red Sox",
+        "away_team": "Detroit Tigers",
+        "game_date": "2023-08-12",
+        "game_time": "20:10:00",
+        "favourite": "Detroit Tigers",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Miami Marlins",
+        "away_team": "New York Yankees",
+        "game_date": "2023-08-12",
+        "game_time": "20:10:00",
+        "favourite": "Miami Marlins",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Philadelphia Phillies",
+        "away_team": "Minnesota Twins",
+        "game_date": "2023-08-12",
+        "game_time": "22:05:00",
+        "favourite": "Minnesota Twins",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Pittsburgh Pirates",
+        "away_team": "Cincinnati Reds",
+        "game_date": "2023-08-12",
+        "game_time": "23:05:00",
+        "favourite": "Pittsburgh Pirates",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Washington Nationals",
+        "away_team": "Oakland Athletics",
+        "game_date": "2023-08-12",
+        "game_time": "23:05:00",
+        "favourite": "Washington Nationals",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Kansas City Royals",
+        "away_team": "St. Louis Cardinals",
+        "game_date": "2023-08-12",
+        "game_time": "23:10:00",
+        "favourite": "St. Louis Cardinals",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "New York Mets",
+        "away_team": "Atlanta Braves",
+        "game_date": "2023-08-12",
+        "game_time": "23:15:00",
+        "favourite": "Atlanta Braves",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Chicago White Sox",
+        "away_team": "Milwaukee Brewers",
+        "game_date": "2023-08-12",
+        "game_time": "23:15:00",
+        "favourite": "Milwaukee Brewers",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Houston Astros",
+        "away_team": "Los Angeles Angels",
+        "game_date": "2023-08-12",
+        "game_time": "23:15:00",
+        "favourite": "Houston Astros",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Arizona Diamondbacks",
+        "away_team": "San Diego Padres",
+        "game_date": "2023-08-13",
+        "game_time": "00:10:00",
+        "favourite": "Arizona Diamondbacks",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "San Francisco Giants",
+        "away_team": "Texas Rangers",
+        "game_date": "2023-08-13",
+        "game_time": "01:05:00",
+        "favourite": "San Francisco Giants",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Los Angeles Dodgers",
+        "away_team": "Colorado Rockies",
+        "game_date": "2023-08-13",
+        "game_time": "01:10:00",
+        "favourite": "Los Angeles Dodgers",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Seattle Mariners",
+        "away_team": "Baltimore Orioles",
+        "game_date": "2023-08-13",
+        "game_time": "01:40:00",
+        "favourite": "Seattle Mariners",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Boston Red Sox",
+        "away_team": "Detroit Tigers",
+        "game_date": "2023-08-13",
+        "game_time": "16:05:00",
+        "favourite": "Boston Red Sox",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Pittsburgh Pirates",
+        "away_team": "Cincinnati Reds",
+        "game_date": "2023-08-13",
+        "game_time": "17:35:00",
+        "favourite": "Pittsburgh Pirates",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Philadelphia Phillies",
+        "away_team": "Minnesota Twins",
+        "game_date": "2023-08-13",
+        "game_time": "17:35:00",
+        "favourite": "Philadelphia Phillies",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Washington Nationals",
+        "away_team": "Oakland Athletics",
+        "game_date": "2023-08-13",
+        "game_time": "17:35:00",
+        "favourite": "Washington Nationals",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Toronto Blue Jays",
+        "away_team": "Chicago Cubs",
+        "game_date": "2023-08-13",
+        "game_time": "17:37:00",
+        "favourite": "Toronto Blue Jays",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Tampa Bay Rays",
+        "away_team": "Cleveland Guardians",
+        "game_date": "2023-08-13",
+        "game_time": "17:40:00",
+        "favourite": "Tampa Bay Rays",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Miami Marlins",
+        "away_team": "New York Yankees",
+        "game_date": "2023-08-13",
+        "game_time": "17:40:00",
+        "favourite": "New York Yankees",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Chicago White Sox",
+        "away_team": "Milwaukee Brewers",
+        "game_date": "2023-08-13",
+        "game_time": "18:10:00",
+        "favourite": "Milwaukee Brewers",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Houston Astros",
+        "away_team": "Los Angeles Angels",
+        "game_date": "2023-08-13",
+        "game_time": "18:10:00",
+        "favourite": "Houston Astros",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "San Francisco Giants",
+        "away_team": "Texas Rangers",
+        "game_date": "2023-08-13",
+        "game_time": "20:05:00",
+        "favourite": "San Francisco Giants",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Arizona Diamondbacks",
+        "away_team": "San Diego Padres",
+        "game_date": "2023-08-13",
+        "game_time": "20:10:00",
+        "favourite": "San Diego Padres",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Seattle Mariners",
+        "away_team": "Baltimore Orioles",
+        "game_date": "2023-08-13",
+        "game_time": "20:10:00",
+        "favourite": "Baltimore Orioles",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "Los Angeles Dodgers",
+        "away_team": "Colorado Rockies",
+        "game_date": "2023-08-13",
+        "game_time": "20:10:00",
+        "favourite": "Los Angeles Dodgers",
+        "sport": "mlb"
+    },
+    {
+        "home_team": "New York Mets",
+        "away_team": "Atlanta Braves",
+        "game_date": "2023-08-13",
+        "game_time": "23:10:00",
+        "favourite": "Atlanta Braves",
+        "sport": "mlb"
+    }
+]

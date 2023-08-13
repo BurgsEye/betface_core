@@ -1,0 +1,81 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="mt-5 mb-4">Tips for {% if game %} {{ game.home_team }} vs {{ game.away_team }} {% else %} All Games {% endif %}</h1>
+
+    <button type="button" class="btn btn-success" id="downloadCSV">Download CSV</button>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Bet Type</th>
+                <th>Source</th>
+                <th>Type</th>
+                <th>Tipster</th>
+                
+                
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tip in tips %}
+            <tr>
+                <td>{{ tip.game.home_team }} vs {{ tip.game.away_team }} </td>
+                <td>{{ tip.get_bet_type_display  }}</td>
+                <td>{{ tip.tipster.source|default:"" }}</td>
+                <td>{{ tip.tipster.type|default:"" }}</td>
+                <td>{{ tip.tipster }}</td>
+                
+                <td>
+                {% if tip.bet_type == 'MoneyLine' %}
+                    {{ tip.selected_team }}
+                {% elif tip.bet_type == 'Spread' %}
+                    Spread: {{ tip.spread_value }}
+                {% elif tip.bet_type == 'OverUnder' %}
+                    {{ tip.over_under }}
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById("downloadCSV").addEventListener("click", function(){
+        var table = document.querySelector("table");
+        var rows = table.querySelectorAll("tr");
+        var csv = [];
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = [], cols = rows[i].querySelectorAll("td, th");
+
+            for (var j = 0; j < cols.length; j++) 
+                row.push(cols[j].innerText);
+            
+            csv.push(row.join(","));        
+        }
+
+        downloadCSVFile(csv.join("\n"));
+    });
+
+    function downloadCSVFile(csv){
+        var blob = new Blob([csv], { type: 'text/csv' });
+        var url = window.URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.setAttribute("hidden", "");
+        a.setAttribute("href", url);
+        a.setAttribute("download", "export.csv");
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+
+{% endblock %}

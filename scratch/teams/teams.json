@@ -1,0 +1,182 @@
+[
+    {
+        "city": "Phoenix",
+        "id": 1,
+        "name": "Arizona Diamondbacks",
+        "short_name": null
+    },
+    {
+        "city": "Atlanta",
+        "id": 2,
+        "name": "Atlanta Braves",
+        "short_name": null
+    },
+    {
+        "city": "Baltimore",
+        "id": 3,
+        "name": "Baltimore Orioles",
+        "short_name": null
+    },
+    {
+        "city": "Boston",
+        "id": 4,
+        "name": "Boston Red Sox",
+        "short_name": null
+    },
+    {
+        "city": "Chicago",
+        "id": 5,
+        "name": "Chicago Cubs",
+        "short_name": null
+    },
+    {
+        "city": "Chicago",
+        "id": 6,
+        "name": "Chicago White Sox",
+        "short_name": null
+    },
+    {
+        "city": "Cincinnati",
+        "id": 7,
+        "name": "Cincinnati Reds",
+        "short_name": null
+    },
+    {
+        "city": "Cleveland",
+        "id": 8,
+        "name": "Cleveland Guardians",
+        "short_name": null
+    },
+    {
+        "city": "Denver",
+        "id": 9,
+        "name": "Colorado Rockies",
+        "short_name": null
+    },
+    {
+        "city": "Detroit",
+        "id": 10,
+        "name": "Detroit Tigers",
+        "short_name": null
+    },
+    {
+        "city": "Houston",
+        "id": 11,
+        "name": "Houston Astros",
+        "short_name": null
+    },
+    {
+        "city": "Kansas City",
+        "id": 12,
+        "name": "Kansas City Royals",
+        "short_name": null
+    },
+    {
+        "city": "Anaheim",
+        "id": 13,
+        "name": "Los Angeles Angels",
+        "short_name": null
+    },
+    {
+        "city": "Los Angeles",
+        "id": 14,
+        "name": "Los Angeles Dodgers",
+        "short_name": null
+    },
+    {
+        "city": "Miami",
+        "id": 15,
+        "name": "Miami Marlins",
+        "short_name": null
+    },
+    {
+        "city": "Milwaukee",
+        "id": 16,
+        "name": "Milwaukee Brewers",
+        "short_name": null
+    },
+    {
+        "city": "Minneapolis",
+        "id": 17,
+        "name": "Minnesota Twins",
+        "short_name": null
+    },
+    {
+        "city": "New York City",
+        "id": 18,
+        "name": "New York Yankees",
+        "short_name": null
+    },
+    {
+        "city": "New York City",
+        "id": 19,
+        "name": "New York Mets",
+        "short_name": null
+    },
+    {
+        "city": "Oakland",
+        "id": 20,
+        "name": "Oakland Athletics",
+        "short_name": null
+    },
+    {
+        "city": "Philadelphia",
+        "id": 21,
+        "name": "Philadelphia Phillies",
+        "short_name": null
+    },
+    {
+        "city": "Pittsburgh",
+        "id": 22,
+        "name": "Pittsburgh Pirates",
+        "short_name": null
+    },
+    {
+        "city": "San Diego",
+        "id": 23,
+        "name": "San Diego Padres",
+        "short_name": null
+    },
+    {
+        "city": "San Francisco",
+        "id": 24,
+        "name": "San Francisco Giants",
+        "short_name": null
+    },
+    {
+        "city": "Seattle",
+        "id": 25,
+        "name": "Seattle Mariners",
+        "short_name": null
+    },
+    {
+        "city": "St. Louis",
+        "id": 26,
+        "name": "St. Louis Cardinals",
+        "short_name": null
+    },
+    {
+        "city": "Washington",
+        "id": 27,
+        "name": "Washington Nationals",
+        "short_name": "WN"
+    },
+    {
+        "city": "Dallas",
+        "id": 28,
+        "name": "Texas Rangers",
+        "short_name": ""
+    },
+    {
+        "city": "Toronto",
+        "id": 29,
+        "name": "Toronto Blue Jays",
+        "short_name": ""
+    },
+    {
+        "city": "St. Petersburg",
+        "id": 30,
+        "name": "Tampa Bay Rays",
+        "short_name": ""
+    }
+]

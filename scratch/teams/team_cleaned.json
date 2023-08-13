@@ -1,0 +1,152 @@
+[
+    {
+        "city": "Phoenix",
+        "name": "Arizona Diamondbacks",
+        "sport": 1
+    },
+    {
+        "city": "Atlanta",
+        "name": "Atlanta Braves",
+        "sport": 1
+    },
+    {
+        "city": "Baltimore",
+        "name": "Baltimore Orioles",
+        "sport": 1
+    },
+    {
+        "city": "Boston",
+        "name": "Boston Red Sox",
+        "sport": 1
+    },
+    {
+        "city": "Chicago",
+        "name": "Chicago Cubs",
+        "sport": 1
+    },
+    {
+        "city": "Chicago",
+        "name": "Chicago White Sox",
+        "sport": 1
+    },
+    {
+        "city": "Cincinnati",
+        "name": "Cincinnati Reds",
+        "sport": 1
+    },
+    {
+        "city": "Cleveland",
+        "name": "Cleveland Guardians",
+        "sport": 1
+    },
+    {
+        "city": "Denver",
+        "name": "Colorado Rockies",
+        "sport": 1
+    },
+    {
+        "city": "Detroit",
+        "name": "Detroit Tigers",
+        "sport": 1
+    },
+    {
+        "city": "Houston",
+        "name": "Houston Astros",
+        "sport": 1
+    },
+    {
+        "city": "Kansas City",
+        "name": "Kansas City Royals",
+        "sport": 1
+    },
+    {
+        "city": "Anaheim",
+        "name": "Los Angeles Angels",
+        "sport": 1
+    },
+    {
+        "city": "Los Angeles",
+        "name": "Los Angeles Dodgers",
+        "sport": 1
+    },
+    {
+        "city": "Miami",
+        "name": "Miami Marlins",
+        "sport": 1
+    },
+    {
+        "city": "Milwaukee",
+        "name": "Milwaukee Brewers",
+        "sport": 1
+    },
+    {
+        "city": "Minneapolis",
+        "name": "Minnesota Twins",
+        "sport": 1
+    },
+    {
+        "city": "New York City",
+        "name": "New York Yankees",
+        "sport": 1
+    },
+    {
+        "city": "New York City",
+        "name": "New York Mets",
+        "sport": 1
+    },
+    {
+        "city": "Oakland",
+        "name": "Oakland Athletics",
+        "sport": 1
+    },
+    {
+        "city": "Philadelphia",
+        "name": "Philadelphia Phillies",
+        "sport": 1
+    },
+    {
+        "city": "Pittsburgh",
+        "name": "Pittsburgh Pirates",
+        "sport": 1
+    },
+    {
+        "city": "San Diego",
+        "name": "San Diego Padres",
+        "sport": 1
+    },
+    {
+        "city": "San Francisco",
+        "name": "San Francisco Giants",
+        "sport": 1
+    },
+    {
+        "city": "Seattle",
+        "name": "Seattle Mariners",
+        "sport": 1
+    },
+    {
+        "city": "St. Louis",
+        "name": "St. Louis Cardinals",
+        "sport": 1
+    },
+    {
+        "city": "Washington",
+        "name": "Washington Nationals",
+        "sport": 1
+    },
+    {
+        "city": "Dallas",
+        "name": "Texas Rangers",
+        "sport": 1
+    },
+    {
+        "city": "Toronto",
+        "name": "Toronto Blue Jays",
+        "sport": 1
+    },
+    {
+        "city": "St. Petersburg",
+        "name": "Tampa Bay Rays",
+        "sport": 1
+    }
+]

@@ -1,0 +1,17 @@
+date,source,team_1,team_2,dunkel_predicted_winner,dunkel_predicted_score,dunkel_pick,vegas_predicted_score,vegas_predicted_score
+2023-08-13,dunkel,Texas Rangers,San Francisco Giants,Giants,Total Score: 5,Texas Rangers - Under,Rangers,Total Score: 8
+2023-08-12,dunkel,Atlanta Braves,New York Mets,Mets,Total Score: 9,Atlanta Braves - Under,Braves,Total Score: 10
+2023-08-12,dunkel,Chicago Cubs,Toronto Blue Jays,Cubs,Total Score: 7,Chicago Cubs - Under,Cubs,Total Score: 8
+2023-08-12,dunkel,Detroit Tigers,Boston Red Sox,Red Sox,Total Score: 7,Detroit Tigers - Under,Red Sox,Total Score: 10
+2023-08-12,dunkel,New York Yankees,Miami Marlins,Marlins,Total Score: 11,New York Yankees - Over,Marlins,Total Score: 8
+2023-08-12,dunkel,Cleveland Guardians,Tampa Bay Rays,Rays,Total Score: 9,Cleveland Guardians - Over,Rays,Total Score: 8
+2023-08-12,dunkel,Minnesota Twins,Philadelphia Phillies,Twins,Total Score: 11,Minnesota Twins - Over,Twins,Total Score: 9
+2023-08-12,dunkel,Oakland Athletics,Washington Nationals,Athletics,Total Score: 7,Oakland Athletics - Under,Nationals,Total Score: 10
+2023-08-12,dunkel,Cincinnati Reds,Pittsburgh Pirates,Reds,Total Score: 12,Cincinnati Reds - Over,Reds,Total Score: 9
+2023-08-12,dunkel,St. Louis Cardinals,Kansas City Royals,Cardinals,Total Score: 11,St. Louis Cardinals - Over,Cardinals,Total Score: 9
+2023-08-12,dunkel,Los Angeles Angels,Houston Astros,Astros,Total Score: 11,Los Angeles Angels - Over,Astros,Total Score: 10
+2023-08-12,dunkel,Milwaukee Brewers,Chicago White Sox,Brewers,Total Score: 11,Milwaukee Brewers - Over,Brewers,Total Score: 8
+2023-08-12,dunkel,Atlanta Braves,New York Mets,Braves,Total Score: 9,Atlanta Braves - Over,Braves,Total Score: 8
+2023-08-13,dunkel,San Diego Padres,Arizona Diamondbacks,Padres,Total Score: 10,San Diego Padres - Over,Diamondbacks,Total Score: 9
+2023-08-13,dunkel,Colorado Rockies,Los Angeles Dodgers,Dodgers,Total Score: 7,Colorado Rockies - Under,Dodgers,Total Score: 10
+2023-08-13,dunkel,Baltimore Orioles,Seattle Mariners,Orioles,Total Score: 9,Baltimore Orioles - Over,Mariners,Total Score: 8

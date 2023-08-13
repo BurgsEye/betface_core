@@ -1,0 +1,13 @@
+{
+    "selected_team": "Team 1",
+    "bet_type": "Spread",
+    "over_under": "Over",
+    "spread_value" : 20,
+    "tipster": "Jean Paul",
+    "game": {
+      "home_team": "T1 v1",
+      "away_team": "Team 2",
+      "sport": "mlb",
+      "game_date": "2023-08-29"
+    }
+  }
