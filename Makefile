@@ -36,3 +36,9 @@ odds:
 .PHONY: scrape
 scrape:
 	poetry run python -m core.manage run_scrapers
+
+
+lazy-git:
+	git add .
+	git commit -m "lazy commit"
+	git push
