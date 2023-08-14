@@ -12,7 +12,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Game</th>
+                
+                {% if game %}  {% else %} <th>Game</th>{% endif %}
                 <th>Bet Type</th>
                 <th>Source</th>
                 <th>Type</th>
@@ -25,7 +26,8 @@
         <tbody>
         {% for tip in tips %}
             <tr>
-                <td>{{ tip.game.home_team }} vs {{ tip.game.away_team }} </td>
+                
+                {% if game %}  {% else %} <td>{{ tip.game.home_team }} vs {{ tip.game.away_team }} </td>{% endif %}
                 <td>{{ tip.get_bet_type_display  }}</td>
                 <td>{{ tip.tipster.source|default:"" }}</td>
                 <td>{{ tip.tipster.type|default:"" }}</td>
