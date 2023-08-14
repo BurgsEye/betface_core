@@ -72,6 +72,12 @@ db.sqlite3
 
 static/
 
+
+
+
+
+
+
 # Installer logs 
 pip-log.txt 
 pip-delete-this-directory.txt 
@@ -141,3 +147,6 @@ GitHub.sublime-settings
 .history
 
 debug.log
+
+
+core/scrapers/scraper_logic/data/*
