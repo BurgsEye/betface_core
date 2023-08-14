@@ -4,6 +4,8 @@ from games.models import Team, TeamAlias, Game
 from rest_framework import serializers
 from django.db.models import Q
 
+from datetime import datetime, timedelta
+
 def get_team_by_name_or_alias(team_name):
     """Retrieve a Team instance by its name or alias."""
     try:
@@ -16,7 +18,7 @@ def get_team_by_name_or_alias(team_name):
             raise serializers.ValidationError(f"Team '{team_name}' does not exist.")
         
 
-def get_game_by_teams_and_date(home_team, away_team, game_date):
+def get_game_by_teams_and_date(home_team, away_team, game_date, first=True):
     """Retrieve a Game instance by its home team, away_team, and date."""
     
     # Construct Q queries for home and away teams based on name or alias
@@ -29,8 +31,13 @@ def get_game_by_teams_and_date(home_team, away_team, game_date):
 
         # Check if a game was found
         if game.exists():
+  
             return game.first()
         else:
+            if first:
+                # add a day and try again
+                game_date = game_date + timedelta(days=1)
+                return get_game_by_teams_and_date(home_team, away_team, game_date, first=False)
             raise Game.DoesNotExist
 
     except Game.DoesNotExist:

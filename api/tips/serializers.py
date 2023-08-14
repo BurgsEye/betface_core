@@ -10,7 +10,7 @@ from shared.utils import get_team_by_name_or_alias, get_game_by_teams_and_date
 
 class TipSerializer(serializers.ModelSerializer):
     game = GameSerializer()
-    selected_team = serializers.CharField(source="selected_team.name")
+    selected_team = serializers.CharField(source="selected_team.name", required=False)
     tipster = serializers.CharField(source="tipster.name")
     source = serializers.CharField(source="tipster.source")
     bet_type = serializers.CharField()
@@ -85,10 +85,14 @@ class TipSerializer(serializers.ModelSerializer):
             )
 
 
-        # Extract and process selected team data
-        validated_data["selected_team"] = get_team_by_name_or_alias(
-            validated_data["selected_team"]["name"]
-        )
+        try:
+            if validated_data["selected_team"]["name"]:
+                # Extract and process selected team data
+                validated_data["selected_team"] = get_team_by_name_or_alias(
+                    validated_data["selected_team"]["name"]
+                )
+        except KeyError:
+            pass
 
         # CHECK IF TIPSTER EXISTS
         # IF NOT, CREATE IT

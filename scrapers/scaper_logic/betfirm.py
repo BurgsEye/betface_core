@@ -66,12 +66,26 @@ def scrape_page():
         game_result, sep, tail = game_result.partition('-')
         game_result, sep, tail = game_result.partition('+')
 
+        prediction = game_result.strip()
+        bet_type = 'MoneyLine'
 
-        tip = {
-                "selected_team":game_result.strip(),
+
+
+        print(prediction.split(" ")[0])
+
+        if prediction.split(" ")[0] == 'OVER' or prediction.split(" ")[0] == 'UNDER':
+            bet_type = 'OverUnder'
+            over_under = prediction.split(" ")[0].capitalize()
+            over_under_value = prediction.split(" ")[1].replace("½", ".5")
+            prediction = None
+
+            tip = {
+
                 "source":"betfirm",
                 "tipster":tipser,
-                "bet_type":"MoneyLine",
+                "bet_type":bet_type,
+                "over_under": over_under,
+                "over_under_value": over_under_value,
                 "game": {
                 "game_date" : date,
                 "away_team":game.split(" vs ")[0],
@@ -82,6 +96,24 @@ def scrape_page():
                 # "team_b_percentage":  team_b_per,
                 
             }
+
+        else:
+            tip = {
+                "selected_team":prediction,
+                "source":"betfirm",
+                "tipster":tipser,
+                "bet_type":bet_type,
+                "game": {
+                "game_date" : date,
+                "away_team":game.split(" vs ")[0],
+                "home_team":game.split(" vs ")[1],
+                "sport": "mlb"
+                }
+                # "team_a_percentage":  team_a_per,
+                # "team_b_percentage":  team_b_per,
+                
+            }
+
 
         tips.append(tip)
 
