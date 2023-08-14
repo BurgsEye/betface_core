@@ -71,7 +71,7 @@ def scrape_page():
 
 
 
-        print(prediction.split(" ")[0])
+
 
         if prediction.split(" ")[0] == 'OVER' or prediction.split(" ")[0] == 'UNDER':
             bet_type = 'OverUnder'
