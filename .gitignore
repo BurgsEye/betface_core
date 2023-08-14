@@ -68,6 +68,8 @@ wheels/
 *.manifest 
 *.spec 
 
+db.sqlite3
+
 static/
 
 # Installer logs 
