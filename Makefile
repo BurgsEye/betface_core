@@ -46,7 +46,7 @@ lazy-git:
 	git push
 
 
-make collectstatic:
+collectstatic:
 	source venv/bin/activate
 	poetry run python3 -m core.manage collectstatic --noinput
 
