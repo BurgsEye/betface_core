@@ -38,9 +38,11 @@ scrape:
 	poetry run python -m core.manage run_scrapers
 
 
+m ?= "lazy commit"
+
 lazy-git:
 	git add .
-	git commit -m "lazy commit"
+	git commit -m "$(m)"
 	git push
 
 
