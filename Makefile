@@ -42,3 +42,9 @@ lazy-git:
 	git add .
 	git commit -m "lazy commit"
 	git push
+
+
+make collectstatic:
+	source venv/bin/activate
+	poetry run python3 -m core.manage collectstatic --noinput
+
