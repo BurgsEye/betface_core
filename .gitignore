@@ -150,5 +150,7 @@ debug.log
 
 
 core/scrapers/scraper_logic/data/*
+core/scrapers/scraper_logic/data/
 
 db.sqlite3
+scrapers/scaper_logic/data/*
