@@ -13,28 +13,35 @@ class Command(BaseCommand):
         print("Scraping Drating tips...")
         tips = scrape_dratings()
         for tip in tips:
-            serializer = TipSerializer(data=tip)
-            if serializer.is_valid():
-                serializer.save()
-                print("Saved Drating tip: {}".format(tip['game']))
-            else:
-                print(serializer.errors)
+            try:
+                serializer = TipSerializer(data=tip)
+                if serializer.is_valid():
+                    serializer.save()
+                    print("Saved Drating tip: {}".format(tip['game']))
+                else:
+                    print(serializer.errors)
+            except Exception as e:
+                print(e, tip)
 
         print("Scraping Dunkel tips...")
         tips = scrape_dunkel()
         for tip in tips:
-            serializer = TipSerializer(data=tip)
-            if serializer.is_valid():
-                serializer.save()
-                print("Saved Dunkel tip: {}".format(tip['game']))
-            else:
-                print(serializer.errors)
+            try:
+                serializer = TipSerializer(data=tip)
+                if serializer.is_valid():
+                    serializer.save()
+                    print("Saved Dunkel tip: {}".format(tip['game']))
+                else:
+                    print(serializer.errors)
+            except Exception as e:
+                print(e, tip)
 
         print("Scraping Betfirm tips...")
         tips = scrape_betfirm()
         for tip in tips:
-            serializer = TipSerializer(data=tip)
             try:
+                serializer = TipSerializer(data=tip)
+                
                 if serializer.is_valid():
                     serializer.save()
                     print("Saved Betfirm tip: {}".format(tip['game']))
