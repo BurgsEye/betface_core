@@ -99,7 +99,7 @@ def scrape_page(link):
    
     # game_date = datetime.strptime(game_date, "%B %d, %Y %I:%M %p %Z").date()
 
-    tipster = {"name": "uunderdog", "source": "wunderdog"}
+    tipster = {"name": "wunderdog", "source": "wunderdog"}
     game = {"game_date": game_date, "away_team": away_team, "home_team": home_team, "sport": "mlb"}
 
     target_div = soup.find("div", class_="p-picks-table-label", text="Computer Predictions")
