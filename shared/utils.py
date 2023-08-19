@@ -36,6 +36,9 @@ def get_game_by_teams_and_date(home_team, away_team, game_date, first=True):
         else:
             if first:
                 # add a day and try again
+                if isinstance(game_date, str):
+                    game_date = datetime.strptime(game_date, '%Y-%m-%d')
+                # game_object = datetime.strptime(game_date, '%Y-%m-%d')
                 game_date = game_date + timedelta(days=1)
                 return get_game_by_teams_and_date(home_team, away_team, game_date, first=False)
             raise Game.DoesNotExist

@@ -83,8 +83,8 @@ def scrape_links():
 
             tip = {
         
-                'source': 'dunkel',
-                'tipster': 'dunkel',
+                
+                'tipster': {"name": 'dunkel', 'source': 'dunkel'},
                 'selected_team': predicted_winner,
                 "bet_type":"OverUnder",
                 "over_under": over_under,
@@ -99,8 +99,7 @@ def scrape_links():
 
             tip2 = {
         
-                'source': 'dunkel',
-                'tipster': 'dunkel',
+                'tipster': {"name": 'dunkel', 'source': 'dunkel'},
                 'selected_team': predicted_winner,
                 "bet_type":"MoneyLine",
                 "game": {
