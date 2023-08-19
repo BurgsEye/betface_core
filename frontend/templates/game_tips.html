@@ -37,7 +37,7 @@
                 {% if tip.bet_type == 'MoneyLine' %}
                     {{ tip.selected_team }}
                 {% elif tip.bet_type == 'Spread' %}
-                    Spread: {{ tip.spread_value }}
+                {{ tip.selected_team }}
                 {% elif tip.bet_type == 'OverUnder' %}
                     {{ tip.over_under }}
                 {% endif %}
