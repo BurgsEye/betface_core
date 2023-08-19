@@ -150,5 +150,7 @@ debug.log
 
 
 core/scrapers/scraper_logic/data/*
+scrapers/scraper_logic/data/*
+core/scrapers/odds_api/data/*
 
 db.sqlite3
