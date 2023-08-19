@@ -54,8 +54,8 @@ def scrape_listings():
 
             tip = {
                 "selected_team":predicted_winner,
-                "source":"drating",
-                "tipster":"drating",
+                
+                "tipster":{ "name":"drating","source":"drating"},
                 "bet_type":"MoneyLine",
                 "game": {
                 "game_date" : formatted_date,

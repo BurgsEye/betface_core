@@ -1,13 +1,18 @@
-{
-    "selected_team": "Team 1",
-    "bet_type": "Spread",
-    "over_under": "Over",
-    "spread_value" : 20,
-    "tipster": "Jean Paul",
+[
+
+  {
+    "tipster": {
+      "name": "R&R Totals",
+      "source": "betfirm"
+    },
+    "bet_type": "OverUnder",
+    "over_under": "Under",
+    "over_under_value": "9.5",
     "game": {
-      "home_team": "T1 v1",
-      "away_team": "Team 2",
-      "sport": "mlb",
-      "game_date": "2023-08-29"
+      "game_date": "2023-08-19",
+      "away_team": "SFO",
+      "home_team": "ATL",
+      "sport": "mlb"
     }
   }
+]

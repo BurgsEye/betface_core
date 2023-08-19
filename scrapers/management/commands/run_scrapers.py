@@ -39,7 +39,9 @@ class Command(BaseCommand):
                     serializer.save()
                     print("Saved Betfirm tip: {}".format(tip['game']))
                 else:
+                    print('Betfirm tip not valid', end=' ')
                     print(serializer.errors)
             except Exception as e:
+                print('Betfirm tip not valid', end=' ')
                 print(e, tip)
 

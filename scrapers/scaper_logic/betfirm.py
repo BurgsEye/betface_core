@@ -81,8 +81,8 @@ def scrape_page():
 
             tip = {
 
-                "source":"betfirm",
-                "tipster":tipser,
+                
+                "tipster":{"name":tipser,"source":"betfirm"},
                 "bet_type":bet_type,
                 "over_under": over_under,
                 "over_under_value": over_under_value,
@@ -100,8 +100,7 @@ def scrape_page():
         else:
             tip = {
                 "selected_team":prediction,
-                "source":"betfirm",
-                "tipster":tipser,
+                "tipster":{"name":tipser,"source":"betfirm"},
                 "bet_type":bet_type,
                 "game": {
                 "game_date" : date,

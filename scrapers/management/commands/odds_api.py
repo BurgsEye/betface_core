@@ -10,9 +10,16 @@ class Command(BaseCommand):
         games = get_odds()
         for game in games:
             serializer = GameSerializer(data=game)
-            if serializer.is_valid():
-                serializer.save()
-                print(f"Game saved {game['home_team']} vs {game['away_team']}")
-            else:
+            try:
+                if serializer.is_valid():
+                    serializer.save()
+                    print(f"Game saved {game['home_team']} vs {game['away_team']}")
+                else:
+                    print(serializer.errors)
+            except Exception as e:
+                print(e)
                 print(serializer.errors)
+                print(game)
+                print('Error saving game')
+                continue
 
