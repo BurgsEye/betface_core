@@ -35,10 +35,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        self.run_scraper(scrape_covers, "Covers")
         self.run_scraper(scrape_dratings, "Dratings")
         self.run_scraper(scrape_dunkel, "Dunkel")
         self.run_scraper(scrape_betfirm, "Betfirm")
         
         self.run_scraper(scrape_pickwise, "Pickwise")
         self.run_scraper(scrape_wunderdog, "Wunderdog")
-        self.run_scraper(scrape_covers, "Covers")
+        
