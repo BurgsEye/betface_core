@@ -6,6 +6,13 @@ from django.db.models import Q
 
 from datetime import datetime, timedelta
 
+
+class ModelDoesNotExistError(Exception):
+    def __init__(self, model_name, *args, **kwargs):
+        self.model_name = model_name
+        super().__init__(*args, **kwargs)
+
+
 def get_team_by_name_or_alias(team_name):
     """Retrieve a Team instance by its name or alias."""
     try:
@@ -15,7 +22,7 @@ def get_team_by_name_or_alias(team_name):
             alias = TeamAlias.objects.get(alias=team_name)
             return alias.team
         except TeamAlias.DoesNotExist:
-            raise serializers.ValidationError(f"Team '{team_name}' does not exist.")
+            raise ModelDoesNotExistError("Team",f"Team '{team_name}' does not exist.")
         
 
 def get_game_by_teams_and_date(home_team, away_team, game_date, first=True):
@@ -43,7 +50,7 @@ def get_game_by_teams_and_date(home_team, away_team, game_date, first=True):
                 game_date = game_date + timedelta(days=1)
                 # print(home_team, away_team, game_date)
                 return get_game_by_teams_and_date(home_team, away_team, game_date, first=False)
-            raise Game.DoesNotExist
+            raise ModelDoesNotExistError("Game",f"Game between {home_team} and {away_team} on {game_date} does not exist.")
 
     except Game.DoesNotExist:
-        raise serializers.ValidationError(f"Game between {home_team} and {away_team} on {game_date} does not exist.")
+        raise ModelDoesNotExistError("Game",f"Game between {home_team} and {away_team} on {game_date} does not exist.")

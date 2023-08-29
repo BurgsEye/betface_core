@@ -5,6 +5,10 @@ from scrapers.scaper_logic.betfirm import scrape_betfirm
 from scrapers.scaper_logic.wunderdog import scrape_wunderdog
 from scrapers.scaper_logic.pickwise import scrape_pickwise
 from scrapers.scaper_logic.covers import scrape_covers
+from scrapers.models import ScraperLog
+from datetime import datetime
+
+from shared.utils import ModelDoesNotExistError
 
 from api.tips.serializers import TipSerializer
 
@@ -13,7 +17,9 @@ class Command(BaseCommand):
     help = "Run the scrapers"
 
     def run_scraper(self, scraper_func, scraper_name):
+        scraper_time = datetime.now()
         print(f"Scraping {scraper_name} tips...")
+        ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="INFO", scraper_message="Start scraping tips...")
         try:
             tips = scraper_func()
         except Exception as e:
@@ -29,9 +35,20 @@ class Command(BaseCommand):
                     print(f"Saved {scraper_name} tip: {tip['game']}")
                 else:
                     print(serializer.errors)
+            except ModelDoesNotExistError as e:
+                if e.model_name == "Game":
+                    ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="ERROR", scraper_message=str(e))
+
+                elif e.model_name == "Team":
+                    ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="WARNING", scraper_message=str(e))
+                else:
+                    ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="ERROR", scraper_message=str(e)) 
             except Exception as e:
+                ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="ERROR", scraper_message=str(e))
                 print(f"{scraper_name} tip not valid", end=' ')
                 print(e, tip)
+        
+        ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="INFO", scraper_message="Finished scraping tips...") 
 
     def handle(self, *args, **options):
 
