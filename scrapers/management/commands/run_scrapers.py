@@ -4,6 +4,7 @@ from scrapers.scaper_logic.dunkel import scrape_dunkel
 from scrapers.scaper_logic.betfirm import scrape_betfirm
 from scrapers.scaper_logic.wunderdog import scrape_wunderdog
 from scrapers.scaper_logic.pickwise import scrape_pickwise
+from scrapers.scaper_logic.covers import scrape_covers
 
 from api.tips.serializers import TipSerializer
 
@@ -13,7 +14,13 @@ class Command(BaseCommand):
 
     def run_scraper(self, scraper_func, scraper_name):
         print(f"Scraping {scraper_name} tips...")
-        tips = scraper_func()
+        try:
+            tips = scraper_func()
+        except Exception as e:
+            print(f"{scraper_name} scraper failed")
+            print(e)
+            return
+        
         for tip in tips:
             try:
                 serializer = TipSerializer(data=tip)
@@ -34,39 +41,4 @@ class Command(BaseCommand):
         
         self.run_scraper(scrape_pickwise, "Pickwise")
         self.run_scraper(scrape_wunderdog, "Wunderdog")
-
-        # print("Scraping Drating tips...")
-        # tips = scrape_dratings()
-        # for tip in tips:
-        #     serializer = TipSerializer(data=tip)
-        #     if serializer.is_valid():
-        #         serializer.save()
-        #         print("Saved Drating tip: {}".format(tip['game']))
-        #     else:
-        #         print(serializer.errors)
-
-        # print("Scraping Dunkel tips...")
-        # tips = scrape_dunkel()
-        # for tip in tips:
-        #     serializer = TipSerializer(data=tip)
-        #     if serializer.is_valid():
-        #         serializer.save()
-        #         print("Saved Dunkel tip: {}".format(tip['game']))
-        #     else:
-        #         print(serializer.errors)
-
-        # print("Scraping Betfirm tips...")
-        # tips = scrape_betfirm()
-        # for tip in tips:
-        #     serializer = TipSerializer(data=tip)
-        #     try:
-        #         if serializer.is_valid():
-        #             serializer.save()
-        #             print("Saved Betfirm tip: {}".format(tip['game']))
-        #         else:
-        #             print('Betfirm tip not valid', end=' ')
-        #             print(serializer.errors)
-        #     except Exception as e:
-        #         print('Betfirm tip not valid', end=' ')
-        #         print(e, tip)
-
+        self.run_scraper(scrape_covers, "Covers")
