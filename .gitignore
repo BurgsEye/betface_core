@@ -154,3 +154,4 @@ core/scrapers/scraper_logic/data/
 
 db.sqlite3
 scrapers/scaper_logic/data/*
+scrapers/odds_api/data/*

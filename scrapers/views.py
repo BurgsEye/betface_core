@@ -36,7 +36,8 @@ class LatestLogs(ListView):
                 logs_by_scraper[log.scraper_name] = []
             if log.error_level == "ERROR" or log.error_level == "WARNING":
                 # print(log.scraper_message)
-                logs_by_scraper[log.scraper_name].append(log.scraper_message)
+                if log.scraper_message not in logs_by_scraper[log.scraper_name]:
+                    logs_by_scraper[log.scraper_name].append(log.scraper_message)
             
     
 
