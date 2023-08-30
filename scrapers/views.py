@@ -38,7 +38,7 @@ class LatestLogs(ListView):
                 # print(log.scraper_message)
                 if log.scraper_message not in logs_by_scraper[log.scraper_name]:
                     logs_by_scraper[log.scraper_name].append(log.scraper_message)
-            
+                    # pass
     
 
         return logs_by_scraper
