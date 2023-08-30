@@ -5,6 +5,7 @@ from scrapers.scaper_logic.betfirm import scrape_betfirm
 from scrapers.scaper_logic.wunderdog import scrape_wunderdog
 from scrapers.scaper_logic.pickwise import scrape_pickwise
 from scrapers.scaper_logic.covers import scrape_covers
+from scrapers.scaper_logic.winners_whiners import scrape_winners_whiners
 from scrapers.models import ScraperLog
 from datetime import datetime
 
@@ -52,6 +53,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         scraper_time = datetime.now()
+        self.run_scraper(scrape_winners_whiners, "Winners & Whiners",scraper_time)
         self.run_scraper(scrape_covers, "Covers",scraper_time)
         self.run_scraper(scrape_dratings, "Dratings",scraper_time)
         self.run_scraper(scrape_dunkel, "Dunkel",scraper_time)
@@ -59,4 +61,5 @@ class Command(BaseCommand):
         
         self.run_scraper(scrape_pickwise, "Pickwise",scraper_time)
         self.run_scraper(scrape_wunderdog, "Wunderdog",scraper_time)
+        
         
