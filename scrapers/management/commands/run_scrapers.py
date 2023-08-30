@@ -16,8 +16,8 @@ from api.tips.serializers import TipSerializer
 class Command(BaseCommand):
     help = "Run the scrapers"
 
-    def run_scraper(self, scraper_func, scraper_name):
-        scraper_time = datetime.now()
+    def run_scraper(self, scraper_func, scraper_name, scraper_time):
+        
         print(f"Scraping {scraper_name} tips...")
         ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="INFO", scraper_message="Start scraping tips...")
         try:
@@ -51,12 +51,12 @@ class Command(BaseCommand):
         ScraperLog.objects.create(scraper_name=scraper_name, scraper_start_time =scraper_time, error_level="INFO", scraper_message="Finished scraping tips...") 
 
     def handle(self, *args, **options):
-
-        self.run_scraper(scrape_covers, "Covers")
-        self.run_scraper(scrape_dratings, "Dratings")
-        self.run_scraper(scrape_dunkel, "Dunkel")
-        self.run_scraper(scrape_betfirm, "Betfirm")
+        scraper_time = datetime.now()
+        self.run_scraper(scrape_covers, "Covers",scraper_time)
+        self.run_scraper(scrape_dratings, "Dratings",scraper_time)
+        self.run_scraper(scrape_dunkel, "Dunkel",scraper_time)
+        self.run_scraper(scrape_betfirm, "Betfirm",scraper_time)
         
-        self.run_scraper(scrape_pickwise, "Pickwise")
-        self.run_scraper(scrape_wunderdog, "Wunderdog")
+        self.run_scraper(scrape_pickwise, "Pickwise",scraper_time)
+        self.run_scraper(scrape_wunderdog, "Wunderdog",scraper_time)
         

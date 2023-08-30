@@ -3,8 +3,21 @@ from games.models import Game
 from tips.models import Tip
 from django.db.models import Count
 
+from django.utils import timezone
+
+from django.http import JsonResponse
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+from scrapers.models import ScraperLog
+
+
+from scrapers.views import LatestLogs
+
 from datetime import datetime
 
+from scrapers.management.commands.run_scrapers import Command as run_scrapers
+from scrapers.management.commands.odds_api import Command as odds_api
 # Create your views here.
 
 
@@ -41,3 +54,29 @@ def game_tips(request, game_id=None):
         tips = Tip.objects.filter(game=game)
 
         return render(request, 'game_tips.html', {'game': game, 'tips': tips})
+    
+
+def latest_logs(request):
+
+    latest_time = ScraperLog.objects.latest('scraper_start_time').scraper_start_time
+
+
+    logs = LatestLogs.get_logs()
+
+    context = {'logs': logs, 'latest_time': latest_time}
+
+    return render(request, 'scraper_logs.html', context)
+
+
+def run_script(request):
+    script_path = "/home/ubuntu/cron_task.sh"
+    try:
+        odds_api().handle()
+        run_scrapers().handle()
+
+        return redirect('latest_logs')
+
+
+    except Exception as e:
+        redirect('latest_logs')
+

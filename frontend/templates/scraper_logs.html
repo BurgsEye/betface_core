@@ -1,0 +1,72 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+{% load tz %}
+<!-- Load Bootstrap CSS first -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <h1 class="mt-5 mb-4">Latest Scraper Logs</h1>
+
+    <a id="run_script" href="/frontend/scrapers/run_script/" class="btn btn-success">Run Scrapers</a>
+    <div >Scrapers where last run at {{latest_time|localtime}}</div>
+    <div id="loadingMessage" style="display: none;">Script is running... This may take a few minutes. Page will refresh when complete</div>
+    
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Scraper</th>
+            <th>Number of Logs</th>
+            <th>Logs</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for scraper_name, scraper_logs in logs.items %}
+        <tr data-toggle="collapse" data-target="#{{ scraper_name|slugify }}" class="accordion-toggle">
+            <td>{{ scraper_name }}</td>
+            <td>{{ scraper_logs|length }}</td>
+            <td>Click to view logs</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div id="{{ scraper_name|slugify }}" class="collapse">
+                    <ul>
+                    {% for log in scraper_logs %}
+                        <li>{{ log }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Then load Bootstrap dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+$('#run_script').on('click', function() {
+    $('#loadingMessage').show();
+    $(this).css({
+        'pointer-events': 'none', // Makes the link non-interactive
+        'opacity': '0.5' // Fades out the link to indicate it's disabled
+    });
+});
+
+
+    </script>
+
+
+
+{% endblock %}
